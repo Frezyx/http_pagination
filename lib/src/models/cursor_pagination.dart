@@ -21,5 +21,5 @@ class CursorPagination implements Pagination {
   final String? last;
 
   @override
-  bool get isEmpty => [first, last, prev, next].every((e) => e == null);
+  bool get hasNext => next != null;
 }

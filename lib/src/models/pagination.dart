@@ -4,5 +4,5 @@ abstract class Pagination {
   dynamic get prev;
   dynamic get last;
 
-  bool get isEmpty => [first, last, prev, next].every((e) => e == null);
+  bool get hasNext;
 }

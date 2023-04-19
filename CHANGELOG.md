@@ -1,3 +1,8 @@
+## 0.1.3
+
+- Remove isEmpty getter
+- Add hasNext getter
+
 ## 0.1.2
 
 - Make Pagination interface with isEmpty method for CursorPagination PagesPagination

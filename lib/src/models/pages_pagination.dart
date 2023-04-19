@@ -21,5 +21,5 @@ class PagesPagination implements Pagination {
   final int? last;
 
   @override
-  bool get isEmpty => [first, last, prev, next].every((e) => e == null);
+  bool get hasNext => next != null;
 }

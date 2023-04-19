@@ -1,6 +1,6 @@
 name: http_pagination
 description: Http headers pagination parser
-version: 0.1.2
+version: 0.1.3
 repository: https://github.com/Frezyx/http_pagination
 
 environment:
