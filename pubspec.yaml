@@ -1,5 +1,5 @@
 name: http_pagination
-description: A starting point for Dart libraries or applications.
+description: Http headers pagination parser
 version: 0.1.0
 repository: https://github.com/Frezyx/http_pagination
 
