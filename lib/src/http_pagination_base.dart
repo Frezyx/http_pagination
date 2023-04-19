@@ -1,3 +1,5 @@
+import 'package:http_pagination/src/models/models.dart';
+
 abstract class HttpPagination {
   HttpPagination._();
 
@@ -108,32 +110,4 @@ abstract class HttpPagination {
     final query = clearLinkUri.queryParameters;
     return query;
   }
-}
-
-class CursorPagination {
-  const CursorPagination({
-    required this.first,
-    required this.next,
-    required this.prev,
-    required this.last,
-  });
-
-  final String? first;
-  final String? next;
-  final String? prev;
-  final String? last;
-}
-
-class PagesPagination {
-  const PagesPagination({
-    required this.first,
-    required this.next,
-    required this.prev,
-    required this.last,
-  });
-
-  final int? first;
-  final int? next;
-  final int? prev;
-  final int? last;
 }
