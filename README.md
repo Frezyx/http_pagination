@@ -8,7 +8,7 @@ Work in progress
 
 ```yaml
 dependencies:
-  http_pagination: ^0.1.0
+  http_pagination: ^0.1.1
 ```
 
 ## Usage
