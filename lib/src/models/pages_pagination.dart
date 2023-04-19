@@ -1,4 +1,6 @@
-class PagesPagination {
+import 'package:http_pagination/src/models/models.dart';
+
+class PagesPagination implements Pagination {
   const PagesPagination({
     required this.first,
     required this.next,
@@ -6,8 +8,18 @@ class PagesPagination {
     required this.last,
   });
 
+  @override
   final int? first;
+
+  @override
   final int? next;
+
+  @override
   final int? prev;
+
+  @override
   final int? last;
+
+  @override
+  bool get isEmpty => [first, last, prev, next].every((e) => e == null);
 }

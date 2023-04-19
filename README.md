@@ -8,7 +8,7 @@ Work in progress
 
 ```yaml
 dependencies:
-  http_pagination: ^0.1.1
+  http_pagination: ^0.1.2
 ```
 
 ## Usage
@@ -16,7 +16,8 @@ dependencies:
 ```dart
 import 'package:http_pagination/http_pagination.dart';
 
-final pagination = HttpPagination.parsePagesPagination(res.headers.map);
+final pagination = HttpPagination.parsePagesPagination(res.headers);
+final pagination = HttpPagination.parseCursorPagination(res.headers);
 ```
 
 
