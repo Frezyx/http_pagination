@@ -12,7 +12,7 @@ Works both with pages and cursor pagination
 
 ```yaml
 dependencies:
-  http_pagination: ^0.1.3
+  http_pagination: ^0.2.0
 ```
 
 ## Usage

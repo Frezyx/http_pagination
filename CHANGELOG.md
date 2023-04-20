@@ -1,3 +1,12 @@
+## 0.2.0
+
+- Rename HttpPagination -> HttpPaginationParser
+- Make factory constructor for PagesPagination -> PagesPagination.fromHeaders(headers)
+- Make factory constructor for CursorPagination -> CursorPagination.fromHeaders(headers)
+- Make HttpPaginationParser private class
+- Add simple README.md docs
+- Add tests
+
 ## 0.1.3
 
 - Remove isEmpty getter
