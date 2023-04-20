@@ -1,7 +1,7 @@
 import 'package:http_pagination/src/models/models.dart';
 
-abstract class HttpPagination {
-  HttpPagination._();
+abstract class HttpPaginationParser {
+  HttpPaginationParser._();
 
   static const _linkHeader = 'link';
 
@@ -13,7 +13,7 @@ abstract class HttpPagination {
   static const _cursorKey = 'cursor';
   static const _pageKey = 'page';
 
-  static CursorPagination parseCursorPagination(
+  static CursorPagination parseCursor(
     Map<String, List<String>> headers,
   ) {
     String? firstCursor;
@@ -40,7 +40,7 @@ abstract class HttpPagination {
     );
   }
 
-  static PagesPagination parsePagesPagination(
+  static PagesPagination parsePages(
     Map<String, List<String>> headers,
   ) {
     int? firstPage;

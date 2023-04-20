@@ -1,3 +1,4 @@
+import 'package:http_pagination/http_pagination.dart';
 import 'package:http_pagination/src/models/models.dart';
 
 class CursorPagination implements Pagination {
@@ -7,6 +8,11 @@ class CursorPagination implements Pagination {
     required this.prev,
     required this.last,
   });
+
+  factory CursorPagination.fromHeaders(
+    Map<String, List<String>> headers,
+  ) =>
+      HttpPaginationParser.parseCursor(headers);
 
   @override
   final String? first;

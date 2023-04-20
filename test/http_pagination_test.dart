@@ -15,7 +15,7 @@ void main() {
                 '<http://example.com/last?cursor=jkl>; rel="last"',
           ],
         };
-        final pagination = HttpPagination.parseCursorPagination(headers);
+        final pagination = HttpPaginationParser.parseCursor(headers);
 
         expect(pagination.first, equals('abc'));
         expect(pagination.next, equals('def'));
@@ -25,7 +25,7 @@ void main() {
 
       test('returns null for missing headers', () {
         final headers = <String, List<String>>{};
-        final pagination = HttpPagination.parseCursorPagination(headers);
+        final pagination = HttpPaginationParser.parseCursor(headers);
 
         expect(pagination.first, isNull);
         expect(pagination.next, isNull);
@@ -35,7 +35,7 @@ void main() {
 
       test('returns null for empty headers', () {
         final headers = <String, List<String>>{'link': []};
-        final pagination = HttpPagination.parseCursorPagination(headers);
+        final pagination = HttpPaginationParser.parseCursor(headers);
 
         expect(pagination.first, isNull);
         expect(pagination.next, isNull);
@@ -54,7 +54,7 @@ void main() {
                 '<http://example.com/last?page=10>; rel="last"',
           ],
         };
-        final pagination = HttpPagination.parsePagesPagination(headers);
+        final pagination = HttpPaginationParser.parsePages(headers);
 
         expect(pagination.first, equals(1));
         expect(pagination.next, equals(3));
@@ -64,7 +64,7 @@ void main() {
 
       test('returns null for missing headers', () {
         final headers = <String, List<String>>{};
-        final pagination = HttpPagination.parsePagesPagination(headers);
+        final pagination = HttpPaginationParser.parsePages(headers);
 
         expect(pagination.first, isNull);
         expect(pagination.next, isNull);
@@ -74,7 +74,7 @@ void main() {
 
       test('returns null for empty headers', () {
         final headers = <String, List<String>>{'link': []};
-        final pagination = HttpPagination.parsePagesPagination(headers);
+        final pagination = HttpPaginationParser.parsePages(headers);
 
         expect(pagination.first, isNull);
         expect(pagination.next, isNull);

@@ -1,3 +1,4 @@
+import 'package:http_pagination/http_pagination.dart';
 import 'package:http_pagination/src/models/models.dart';
 
 class PagesPagination implements Pagination {
@@ -7,6 +8,11 @@ class PagesPagination implements Pagination {
     required this.prev,
     required this.last,
   });
+
+  factory PagesPagination.fromHeaders(
+    Map<String, List<String>> headers,
+  ) =>
+      HttpPaginationParser.parsePages(headers);
 
   @override
   final int? first;
