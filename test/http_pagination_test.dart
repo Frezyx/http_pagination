@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_adjacent_string_concatenation, prefer_interpolation_to_compose_strings
 
-import 'package:http_pagination/http_pagination.dart';
+import 'package:http_pagination/src/http_pagination_base.dart';
 import 'package:test/test.dart';
 
 void main() {

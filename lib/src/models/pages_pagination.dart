@@ -1,4 +1,4 @@
-import 'package:http_pagination/http_pagination.dart';
+import 'package:http_pagination/src/http_pagination_base.dart';
 import 'package:http_pagination/src/models/models.dart';
 
 class PagesPagination implements Pagination {
@@ -28,4 +28,25 @@ class PagesPagination implements Pagination {
 
   @override
   bool get hasNext => next != null;
+
+  @override
+  String toString() {
+    return 'PagesPagination(first: $first, next: $next, prev: $prev, last: $last)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is PagesPagination &&
+        other.first == first &&
+        other.next == next &&
+        other.prev == prev &&
+        other.last == last;
+  }
+
+  @override
+  int get hashCode {
+    return first.hashCode ^ next.hashCode ^ prev.hashCode ^ last.hashCode;
+  }
 }

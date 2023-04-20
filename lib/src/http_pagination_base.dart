@@ -1,5 +1,8 @@
 import 'package:http_pagination/src/models/models.dart';
 
+/// Base parser for link http pagination headers
+/// Headers pagination is the easy way to pr
+/// [https://apievangelist.com/2016/05/02/http-header-awareness-using-the-link-header-for-pagination/]
 abstract class HttpPaginationParser {
   HttpPaginationParser._();
 

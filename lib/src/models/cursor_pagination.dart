@@ -1,4 +1,4 @@
-import 'package:http_pagination/http_pagination.dart';
+import 'package:http_pagination/src/http_pagination_base.dart';
 import 'package:http_pagination/src/models/models.dart';
 
 class CursorPagination implements Pagination {
@@ -28,4 +28,25 @@ class CursorPagination implements Pagination {
 
   @override
   bool get hasNext => next != null;
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is CursorPagination &&
+        other.first == first &&
+        other.next == next &&
+        other.prev == prev &&
+        other.last == last;
+  }
+
+  @override
+  int get hashCode {
+    return first.hashCode ^ next.hashCode ^ prev.hashCode ^ last.hashCode;
+  }
+
+  @override
+  String toString() {
+    return 'CursorPagination(first: $first, next: $next, prev: $prev, last: $last)';
+  }
 }
