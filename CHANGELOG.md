@@ -1,3 +1,7 @@
+## 0.2.1
+- Provide documenation
+- Update pub.dev description
+
 ## 0.2.0
 
 - Rename HttpPagination -> HttpPaginationParser
