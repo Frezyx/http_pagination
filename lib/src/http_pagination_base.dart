@@ -105,10 +105,7 @@ abstract class HttpPaginationParser {
 
   static Map<String, String> _getLinkQueryParams(String link) {
     final fullLinkParts = link.split(';');
-    final clearLink = fullLinkParts.first
-        .replaceAll('<', '')
-        .replaceAll('>', '')
-        .replaceAll(' ', '');
+    final clearLink = fullLinkParts.first.replaceAll(RegExp(r'[<> ]'), '');
     final clearLinkUri = Uri.parse(clearLink);
     final query = clearLinkUri.queryParameters;
     return query;
