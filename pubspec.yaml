@@ -1,6 +1,6 @@
 name: http_pagination
 description: Http headers pagination. Parses a link header (web links) into useful models
-version: 0.2.1
+version: 0.2.2
 repository: https://github.com/Frezyx/http_pagination
 
 environment:

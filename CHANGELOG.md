@@ -1,3 +1,6 @@
+## 0.2.2
+- Make RegExp for link parsing
+
 ## 0.2.1
 - Provide documenation
 - Update pub.dev description
